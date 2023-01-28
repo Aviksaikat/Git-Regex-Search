@@ -15,8 +15,7 @@ This program allows you to search for a specific pattern within the files of a G
 # Installation
 To use this program, you will need to have Python 3 and the PyGithub library installed. You can install PyGithub using pip:
 ```bash
-pip install PyGithub
-pip install pytoml
+pip3 install -r requirements.txt
 ```
 
 You will also need to have a GitHub personal access token. You can create one by going to the [GitHub Developer Settings](https://github.com/settings/tokens).
