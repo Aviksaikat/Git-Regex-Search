@@ -55,9 +55,9 @@ def search_repo(repository, pattern) -> tuple:
     return results
 
 
-def git_regex_search(url, pattern):
+def Search(url, pattern):
     # print(type(args))
-    # print(args)
+    #print(args)
     if url:
         if url.endswith(".txt"):
             # The URL is a file containing multiple URLs
@@ -79,22 +79,23 @@ def git_regex_search(url, pattern):
                 # results = repo.search_code(pattern)
                 results = search_repo(url, pattern)
                 for result in results:
-                    print(colored(f"{args.url}/tree/master/{result[0].path}#L{result[1]}", "magenta"))
+                    print(colored(f"{url}/tree/master/{result[0].path}#L{result[1]}", "magenta"))
             except Exception as e:
                 print(f"Error: {e}")
     else:
         try:
             # repo = g.get_repo(args.repo)
             # results = repo.search_code(pattern)
-            results = search_repo(args.repo, pattern)
+            results = search_repo(url, pattern)
             for result in results:
-                print(colored(f"{args.repo}/tree/master/{result[0].path}#L{result[1]}", "green"))
+                print(colored(f"{url}/tree/master/{result[0].path}#L{result[1]}", "green"))
         except Exception as e:
             print(f"Error: {e}")
 
 
 if __name__ == '__main__':
     # Initialize the argument parser
+    #print("Yo")
     parser = argparse.ArgumentParser()
 
     # Add the repository name argument
@@ -119,7 +120,7 @@ if __name__ == '__main__':
         pattern = "latestRoundData"
     
     if args.url:
-        git_regex_search(args.url, pattern)
+        Search(args.url, pattern)
     else:
         print(colored("Print Something is wrong"), "red")
         exit(-3)

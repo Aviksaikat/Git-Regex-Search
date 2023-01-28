@@ -21,7 +21,7 @@ DESCRIPTION = "This program allows you to search for a specific pattern within t
 
 setup(
     name="git_regex_search",
-    version="0.3",
+    version="0.9",
     author="Aviksaikat (Saikat Karmakar)",
     author_email="<aviksaikat@gmail.com>",
     description=DESCRIPTION,
@@ -29,8 +29,6 @@ setup(
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
     install_requires=[
-        "argparse",
-        "threading",
         "toml",
         "re",
         "PyGithub",
