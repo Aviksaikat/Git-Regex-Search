@@ -4,7 +4,7 @@ import os
 import toml
 import re
 from github import Github
-
+from termcolor import colored
 
 # https://pygithub.readthedocs.io/en/latest/examples/Repository.html
 def process_env():
@@ -100,7 +100,7 @@ def main():
                 # results = repo.search_code(pattern)
                 results = search_repo(args.url, pattern)
                 for result in results:
-                    print(f"{args.url}/tree/master/{result[0].path}#L{result[1]}")
+                    print(colored(f"{args.url}/tree/master/{result[0].path}#L{result[1]}", "magenta"))
             except Exception as e:
                 print(f"Error: {e}")
     else:
@@ -109,7 +109,7 @@ def main():
             # results = repo.search_code(pattern)
             results = search_repo(args.repo, pattern)
             for result in results:
-                print(f"{args.repo}/tree/master/{result[0].path}#L{result[1]}")
+                print(colored(f"{args.repo}/tree/master/{result[0].path}#L{result[1]}", "green"))
         except Exception as e:
             print(f"Error: {e}")
 

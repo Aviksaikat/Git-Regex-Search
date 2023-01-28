@@ -56,6 +56,18 @@ The program utilizes multithreading to search through the repository's contents 
 # Regular Expressions
 The program utilizes regular expressions to search for the specified pattern within the files of the repository. This allows for more powerful and flexible searches, as opposed to simple string matching.
 
+
+# Docker
+You can build the image by running the following command in the same directory where the Dockerfile is located:
+```bash
+docker build -t <image-name> .
+```
+
+You can then run the container using the following command:
+```bash
+docker run -e GITHUB_TOKEN=<access_token> <image-name>
+```
+
 # Limitations
 This program only searches the contents of the files and not the name of the files. For my use I don't need it to search the names.
 
