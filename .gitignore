@@ -1,2 +1,5 @@
 config.toml
 __pycache__/*
+build/*
+dist/*
+git_regex_search.egg-info/*

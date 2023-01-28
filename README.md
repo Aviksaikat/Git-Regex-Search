@@ -1,4 +1,4 @@
-# Git Search Using Regex
+# GitHub Search Using Regex
 
 > Saikat Karmakar | 28 Jan:2023
 
@@ -13,6 +13,11 @@ This program allows you to search for a specific pattern within the files of a G
 
 
 # Installation
+```bash
+# using pip
+pip install git-regex-search==0.2
+```
+
 To use this program, you will need to have Python 3 and the PyGithub library installed. You can install PyGithub using pip:
 ```bash
 pip3 install -r requirements.txt
@@ -27,8 +32,8 @@ To use the program, you will need to provide a GitHub access token. The token ca
 - `config.toml` file
 
 ```bash
-python3 main.py -h                                              
-usage: main.py [-h] [-u URL] [-r REGEX]
+python3 git_regex_search.py -h                                              
+usage: git_regex_search.py [-h] [-u URL] [-r REGEX]
 
 options:
   -h, --help            show this help message and exit
@@ -41,7 +46,7 @@ options:
 For example, to search for the pattern `brownie` in the repository `Aviksaikat/RoadClosed-quillctf-brownie`, you would run the following command:
 
 ```bash
-python3 main.py -u https://github.com/Aviksaikat/RoadClosed-quillctf-brownie -r "brownie"
+python3 git_regex_search.py -u https://github.com/Aviksaikat/RoadClosed-quillctf-brownie -r "brownie"
 ```
 
 ![](assets/img.png)
@@ -76,3 +81,6 @@ The program also prints the whole file path where the pattern was found, which i
 # Conclusion
 This program is a powerful tool for quickly searching through the contents of a GitHub repository and finding specific patterns. With the use of regular expressions and multithreading, it is able to search through large repositories quickly and efficiently.
 
+# Version 0.2
+Published as pip package
+- https://pypi.org/project/git-regex-search/0.2/

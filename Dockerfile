@@ -18,4 +18,4 @@ WORKDIR /app
 ENV GITHUB_TOKEN=access_token
 
 # Run the command to start the application
-CMD ["python", "main.py"]
+CMD ["python", "git_regex_search/git_regex_search.py"]
